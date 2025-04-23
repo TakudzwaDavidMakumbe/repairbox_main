@@ -35,7 +35,7 @@ const phones: Phone[] = [
     price: 999,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+13+Pro",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-01.jpg",
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ const phones: Phone[] = [
     price: 799,
     storage: "256GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+S21",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-5g-r.jpg",
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const phones: Phone[] = [
     price: 699,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Pixel+6",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-6.jpg",
   },
   {
     id: 4,
@@ -62,16 +62,16 @@ const phones: Phone[] = [
     price: 649,
     storage: "64GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+12",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-r1.jpg",
   },
   {
     id: 5,
-    name: "Samsung Galaxy A52",
+    name: "Samsung Galaxy S24 Ultra",
     brand: "Samsung",
     price: 399,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A52",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928-stylus.jpg",
   },
   {
     id: 6,
@@ -80,7 +80,7 @@ const phones: Phone[] = [
     price: 729,
     storage: "256GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=OnePlus+9",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/oneplus-9-.jpg",
   },
   {
     id: 7,
@@ -89,7 +89,7 @@ const phones: Phone[] = [
     price: 499,
     storage: "128GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+11",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-11-1.jpg",
   },
   {
     id: 8,
@@ -98,7 +98,7 @@ const phones: Phone[] = [
     price: 449,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Pixel+5a",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-5a-5g.jpg",
   },
   {
     id: 9,
@@ -107,7 +107,7 @@ const phones: Phone[] = [
     price: 499,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A73",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a73-5g.jpg",
   },
   {
     id: 10,
@@ -116,7 +116,7 @@ const phones: Phone[] = [
     price: 449,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A56+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a56-.jpg",
   },
   {
     id: 11,
@@ -125,7 +125,7 @@ const phones: Phone[] = [
     price: 429,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A55+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg",
   },
   {
     id: 12,
@@ -134,7 +134,7 @@ const phones: Phone[] = [
     price: 399,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A54",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a54.jpg",
   },
   {
     id: 13,
@@ -143,7 +143,7 @@ const phones: Phone[] = [
     price: 349,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A34+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a34.jpg",
   },
   {
     id: 14,
@@ -152,7 +152,7 @@ const phones: Phone[] = [
     price: 329,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A33+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a33-5g.jpg",
   },
   {
     id: 15,
@@ -161,7 +161,7 @@ const phones: Phone[] = [
     price: 279,
     storage: "64GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A26+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a26.jpg",
   },
   {
     id: 16,
@@ -170,7 +170,7 @@ const phones: Phone[] = [
     price: 259,
     storage: "64GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A25+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a25.jpg",
   },
   {
     id: 17,
@@ -179,7 +179,7 @@ const phones: Phone[] = [
     price: 239,
     storage: "64GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A24",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a24-4g-2.jpg",
   },
   {
     id: 18,
@@ -188,7 +188,7 @@ const phones: Phone[] = [
     price: 219,
     storage: "64GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A15+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a15-5g-new.jpg",
   },
   {
     id: 19,
@@ -197,7 +197,7 @@ const phones: Phone[] = [
     price: 199,
     storage: "64GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A15",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a15-lte-.jpg",
   },
   {
     id: 20,
@@ -206,7 +206,7 @@ const phones: Phone[] = [
     price: 179,
     storage: "64GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A14",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a14-4g.jpg",
   },
   {
     id: 21,
@@ -215,7 +215,7 @@ const phones: Phone[] = [
     price: 149,
     storage: "32GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A06",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a06-1.jpg",
   },
   {
     id: 22,
@@ -224,7 +224,7 @@ const phones: Phone[] = [
     price: 129,
     storage: "32GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A05",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a05.jpg",
   },
   {
     id: 23,
@@ -233,7 +233,7 @@ const phones: Phone[] = [
     price: 119,
     storage: "32GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+A04s",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a04s.jpg",
   },
   {
     id: 24,
@@ -242,7 +242,7 @@ const phones: Phone[] = [
     price: 379,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M55+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m55.jpg",
   },
   {
     id: 25,
@@ -251,7 +251,7 @@ const phones: Phone[] = [
     price: 359,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M53+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m53-5g.jpg",
   },
   {
     id: 26,
@@ -260,7 +260,7 @@ const phones: Phone[] = [
     price: 329,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M33+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m33.jpg",
   },
   {
     id: 27,
@@ -269,7 +269,7 @@ const phones: Phone[] = [
     price: 349,
     storage: "128GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M51",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m51.jpg",
   },
   {
     id: 28,
@@ -278,7 +278,7 @@ const phones: Phone[] = [
     price: 299,
     storage: "128GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M31s",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m31s.jpg",
   },
   {
     id: 29,
@@ -287,7 +287,7 @@ const phones: Phone[] = [
     price: 279,
     storage: "64GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M31",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m31-sm-m315f.jpg",
   },
   {
     id: 30,
@@ -296,7 +296,7 @@ const phones: Phone[] = [
     price: 249,
     storage: "64GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M21",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m21.jpg",
   },
   {
     id: 31,
@@ -305,7 +305,7 @@ const phones: Phone[] = [
     price: 219,
     storage: "64GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M20",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m20-m205f.jpg",
   },
   {
     id: 32,
@@ -314,7 +314,7 @@ const phones: Phone[] = [
     price: 199,
     storage: "64GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M15+5G",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m15.jpg",
   },
   {
     id: 33,
@@ -323,7 +323,7 @@ const phones: Phone[] = [
     price: 179,
     storage: "64GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M14",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m14-5g-sm-m146.jpg",
   },
   {
     id: 34,
@@ -332,7 +332,7 @@ const phones: Phone[] = [
     price: 159,
     storage: "64GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Galaxy+M13",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m13-4g-india.jpg",
   },
   // Huawei Phones
   {
@@ -342,7 +342,7 @@ const phones: Phone[] = [
     price: 2999,
     storage: "1TB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+Mate+XT+Ultimate",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-xt-ultimate.jpg",
   },
   {
     id: 36,
@@ -351,7 +351,7 @@ const phones: Phone[] = [
     price: 2499,
     storage: "1TB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+Mate+70+RS+Ultimate",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-70-rs-ultimate.jpg",
   },
   {
     id: 37,
@@ -360,7 +360,7 @@ const phones: Phone[] = [
     price: 1899,
     storage: "512GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+Mate+70+Pro+",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-70-pro-plus.jpg",
   },
   {
     id: 38,
@@ -369,7 +369,7 @@ const phones: Phone[] = [
     price: 1499,
     storage: "512GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+Mate+70+Pro",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-70.jpg",
   },
   {
     id: 39,
@@ -378,7 +378,7 @@ const phones: Phone[] = [
     price: 1199,
     storage: "256GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+Mate+70",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-70.jpg",
   },
   {
     id: 40,
@@ -387,7 +387,7 @@ const phones: Phone[] = [
     price: 1899,
     storage: "512GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+Mate+X6",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-x6-.jpg",
   },
   {
     id: 41,
@@ -396,7 +396,7 @@ const phones: Phone[] = [
     price: 899,
     storage: "256GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+MatePad+Pro",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-matepad-pro-132.jpg",
   },
   {
     id: 42,
@@ -405,7 +405,7 @@ const phones: Phone[] = [
     price: 999,
     storage: "256GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+Mate+60",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-60.jpg",
   },
   {
     id: 43,
@@ -414,7 +414,7 @@ const phones: Phone[] = [
     price: 1699,
     storage: "512GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+Mate+X5",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-x5.jpg",
   },
   {
     id: 44,
@@ -423,7 +423,7 @@ const phones: Phone[] = [
     price: 799,
     storage: "256GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+Mate+50",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-mate-50.jpg",
   },
   {
     id: 45,
@@ -432,7 +432,7 @@ const phones: Phone[] = [
     price: 499,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Huawei+G9+Plus",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/huawei-g9-plus.jpg",
   },
   // Honor Phones
   {
@@ -442,7 +442,7 @@ const phones: Phone[] = [
     price: 299,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Honor+X7c",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/honor-play-60-plus.jpg",
   },
   {
     id: 47,
@@ -451,7 +451,7 @@ const phones: Phone[] = [
     price: 249,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Honor+X6b",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/honor-x6b.jpg",
   },
   {
     id: 48,
@@ -460,7 +460,7 @@ const phones: Phone[] = [
     price: 349,
     storage: "256GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Honor+X9b",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/honor-x9b.jpg",
   },
   {
     id: 49,
@@ -469,7 +469,7 @@ const phones: Phone[] = [
     price: 299,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=Honor+X8c",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/honor-x8c.jpg",
   },
   // Additional iPhones
   {
@@ -479,7 +479,7 @@ const phones: Phone[] = [
     price: 199,
     storage: "32GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+6",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-6-2.jpg",
   },
   {
     id: 51,
@@ -488,7 +488,7 @@ const phones: Phone[] = [
     price: 249,
     storage: "64GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+7",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-7-1.jpg",
   },
   {
     id: 52,
@@ -497,7 +497,7 @@ const phones: Phone[] = [
     price: 299,
     storage: "64GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+8",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-8-new-1.jpg",
   },
   {
     id: 53,
@@ -506,7 +506,7 @@ const phones: Phone[] = [
     price: 399,
     storage: "64GB",
     condition: "Refurbished",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+X",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-x-new-1.jpg",
   },
   // iPhone 11 already exists in the list
   // iPhone 12 already exists in the list
@@ -518,7 +518,7 @@ const phones: Phone[] = [
     price: 799,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+14",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-3.jpg",
   },
   {
     id: 55,
@@ -527,7 +527,7 @@ const phones: Phone[] = [
     price: 899,
     storage: "128GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+15",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-1.jpg",
   },
   {
     id: 56,
@@ -536,7 +536,7 @@ const phones: Phone[] = [
     price: 1099,
     storage: "256GB",
     condition: "New",
-    image: "/placeholder.svg?height=300&width=300&text=iPhone+16",
+    image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-1.jpg",
   },
 ]
 
@@ -821,14 +821,15 @@ export default function StorePage() {
                         <div className="flex flex-col gap-4 mt-4 max-h-[70vh] overflow-auto">
                           {cart.map((item) => (
                             <div key={item.phone.id} className="flex gap-4 py-4">
-                              <div className="relative h-20 w-20 rounded-md overflow-hidden flex-shrink-0">
+                                <div className="relative h-20 w-20 rounded-md overflow-hidden flex-shrink-0">
                                 <Image
                                   src={item.phone.image || "/placeholder.svg"}
                                   alt={item.phone.name}
                                   fill
-                                  className="object-cover"
+                                  className="object-contain"
+                                  sizes="80px"
                                 />
-                              </div>
+                                </div>
                               <div className="flex flex-col flex-1">
                                 <h4 className="font-medium">{item.phone.name}</h4>
                                 <p className="text-sm text-gray-500">{item.phone.storage}</p>
@@ -933,11 +934,17 @@ export default function StorePage() {
                     className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
                   >
                     <div className="relative h-48">
-                      <Image src={phone.image || "/placeholder.svg"} alt={phone.name} fill className="object-cover" />
+                      <Image 
+                      src={phone.image || "/placeholder.svg"} 
+                      alt={phone.name} 
+                      fill 
+                      className="object-contain p-2" 
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
                       {phone.condition === "Refurbished" && (
-                        <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
-                          Refurbished
-                        </span>
+                      <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
+                        Refurbished
+                      </span>
                       )}
                     </div>
                     <div className="p-4">
