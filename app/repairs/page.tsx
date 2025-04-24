@@ -2,6 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Smartphone, Battery, Droplet, Camera, Cpu, Lock, CheckCircle, Clock, DollarSign } from "lucide-react"
+import img from  '../../public/6.png'
+import img1 from  '../../public/4.png'
+import img2 from  '../../public/11.png'
+import img3 from  '../../public/8.png'
+import img4 from  '../../public/17.png'
+import img5 from  '../../public/3.png'
+import imgg1 from '../../public/test.jpg'
+import imgg2 from '../../public/test1.jpg'
+import imgg3 from '../../public/test3.jpg'
 
 export default function RepairsPage() {
   // Sample repair services
@@ -9,56 +18,56 @@ export default function RepairsPage() {
     {
       id: 1,
       title: "Screen Replacement",
-      icon: <Smartphone className="h-10 w-10 text-teal-600" />,
+      icon: <Smartphone className="h-10 w-10 text-[#FF9E00]" />,
       description: "Fix cracked or broken screens with high-quality replacement parts.",
       price: "From $79",
       time: "1-2 hours",
-      image: "/placeholder.svg?height=300&width=400&text=Screen+Replacement",
+      image: img,
     },
     {
       id: 2,
       title: "Battery Replacement",
-      icon: <Battery className="h-10 w-10 text-teal-600" />,
+      icon: <Battery className="h-10 w-10 text-[#FF9E00]" />,
       description: "Restore your phone's battery life with a new battery.",
       price: "From $49",
       time: "30-60 minutes",
-      image: "/placeholder.svg?height=300&width=400&text=Battery+Replacement",
+      image: img1,
     },
     {
       id: 3,
       title: "Water Damage Repair",
-      icon: <Droplet className="h-10 w-10 text-teal-600" />,
+      icon: <Droplet className="h-10 w-10 text-[#FF9E00]" />,
       description: "Recover your device from water damage and prevent long-term issues.",
       price: "From $99",
       time: "24-48 hours",
-      image: "/placeholder.svg?height=300&width=400&text=Water+Damage+Repair",
+      image: img2,
     },
     {
       id: 4,
       title: "Camera Repair",
-      icon: <Camera className="h-10 w-10 text-teal-600" />,
+      icon: <Camera className="h-10 w-10 text-[#FF9E00]" />,
       description: "Fix front or rear camera issues to get back to taking great photos.",
       price: "From $69",
       time: "1-2 hours",
-      image: "/placeholder.svg?height=300&width=400&text=Camera+Repair",
+      image: img3,
     },
     {
       id: 5,
       title: "Software Issues",
-      icon: <Cpu className="h-10 w-10 text-teal-600" />,
+      icon: <Cpu className="h-10 w-10 text-[#FF9E00]" />,
       description: "Resolve software glitches, freezing, or other software-related problems.",
       price: "From $39",
       time: "30-60 minutes",
-      image: "/placeholder.svg?height=300&width=400&text=Software+Issues",
+      image: img4,
     },
     {
       id: 6,
       title: "Phone Unlocking",
-      icon: <Lock className="h-10 w-10 text-teal-600" />,
+      icon: <Lock className="h-10 w-10 text-[#FF9E00]" />,
       description: "Unlock your phone to use with any carrier worldwide.",
       price: "From $29",
       time: "15-30 minutes",
-      image: "/placeholder.svg?height=300&width=400&text=Phone+Unlocking",
+      image: img5,
     },
   ]
 
@@ -98,7 +107,13 @@ export default function RepairsPage() {
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="relative h-48">
-                  <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
+                  <Image 
+                  src={service.image || "/placeholder.svg"} 
+                  alt={service.title} 
+                  fill 
+                  className="object-contain w-full h-full"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
@@ -118,6 +133,9 @@ export default function RepairsPage() {
                   </div>
                   <Link href="/contact">
                     <Button className="w-full">Book This Repair</Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button className="w-full bg-[#FF9E00] mt-2">Get a Quote </Button>
                   </Link>
                 </div>
               </div>
@@ -179,7 +197,7 @@ export default function RepairsPage() {
               },
             ].map((step, index) => (
               <div key={index} className="text-center p-6 bg-white rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#FF9E00] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
@@ -203,17 +221,17 @@ export default function RepairsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <CheckCircle className="h-12 w-12 text-teal-600" />,
+                icon: <CheckCircle className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Quality Guarantee",
                 description: "All repairs come with a 90-day warranty for your peace of mind.",
               },
               {
-                icon: <Clock className="h-12 w-12 text-teal-600" />,
+                icon: <Clock className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Quick Turnaround",
                 description: "Most repairs are completed within 24 hours or less.",
               },
               {
-                icon: <DollarSign className="h-12 w-12 text-teal-600" />,
+                icon: <DollarSign className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Competitive Pricing",
                 description: "Quality repairs at fair and transparent prices.",
               },
@@ -228,13 +246,13 @@ export default function RepairsPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16">
+     {/* Testimonials */}
+     <section className="py-16 bg-white">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Don't just take our word for it. Here's what our customers have to say about our repair services.
+              Don't just take our word for it. Here's what our customers have to say about our services.
             </p>
           </div>
 
@@ -243,19 +261,24 @@ export default function RepairsPage() {
               {
                 name: "Sarah Johnson",
                 text: "My screen was completely shattered, but RepairBox fixed it in just 2 hours! Looks brand new and the price was very reasonable.",
+                Image: imgg1,
               },
               {
                 name: "Michael Chen",
-                text: "After my phone got water damage, I thought it was gone for good. The team at RepairBox recovered all my data and fixed the phone. Amazing service!",
+                text: "I bought a refurbished phone from RepairBox and couldn't be happier. It works perfectly and saved me hundreds compared to buying new.",
+                Image: imgg2,
               },
               {
                 name: "Emily Rodriguez",
-                text: "Fast, professional, and affordable. They replaced my battery and now my phone lasts all day again. Highly recommend!",
+                text: "After my phone got water damage, I thought it was gone for good. The team at RepairBox recovered all my data and fixed the phone. Amazing service!",
+                Image: imgg3,
               },
             ].map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg shadow">
                 <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-gray-300 mr-4"></div>
+                    <div className="h-12 w-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                    <Image src={testimonial.Image} alt="testimonial images" className="w-full h-full object-cover" />
+                    </div>
                   <div>
                     <h4 className="font-semibold">{testimonial.name}</h4>
                     <div className="flex text-yellow-400">
@@ -273,7 +296,7 @@ export default function RepairsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-teal-600 text-white">
+      <section className="py-16 bg-[#FF9E00] text-white">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Fix Your Phone?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

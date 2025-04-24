@@ -78,22 +78,22 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <MapPin className="h-10 w-10 text-teal-600" />,
+                icon: <MapPin className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Our Location",
                 details: ["123 Repair Street", "Tech City, TC 12345"],
               },
               {
-                icon: <Phone className="h-10 w-10 text-teal-600" />,
+                icon: <Phone className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Phone Number",
                 details: ["(123) 456-7890", "(123) 456-7891"],
               },
               {
-                icon: <Mail className="h-10 w-10 text-teal-600" />,
+                icon: <Mail className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Email Address",
                 details: ["info@repairbox.com", "support@repairbox.com"],
               },
               {
-                icon: <Clock className="h-10 w-10 text-teal-600" />,
+                icon: <Clock className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Working Hours",
                 details: ["Mon-Fri: 9AM - 7PM", "Sat: 10AM - 5PM", "Sun: Closed"],
               },
@@ -299,7 +299,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-teal-600 text-white">
+      <section className="py-16 bg-[#FF9E00] text-white">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Your Phone Fixed?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -309,7 +309,7 @@ export default function ContactPage() {
             <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100">
               Call Us: (123) 456-7890
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-teal-600">
+            <Button size="lg" variant="outline" className="border-white text-teal-600 hover:bg-white hover:text-teal-600">
               Email Us
             </Button>
           </div>

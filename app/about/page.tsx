@@ -128,24 +128,24 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                icon: <Award className="h-12 w-12 text-teal-600" />,
+                icon: <Award className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Certified Technicians",
                 description:
                   "Our repair technicians are certified and highly trained to handle all types of phone repairs.",
               },
               {
-                icon: <Users className="h-12 w-12 text-teal-600" />,
+                icon: <Users className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Customer-First Approach",
                 description: "We prioritize your needs and ensure you're satisfied with our services.",
               },
               {
-                icon: <Clock className="h-12 w-12 text-teal-600" />,
+                icon: <Clock className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Quick Turnaround",
                 description:
                   "Most repairs are completed within 24 hours or less, so you're not without your device for long.",
               },
               {
-                icon: <CheckCircle className="h-12 w-12 text-teal-600" />,
+                icon: <CheckCircle className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Quality Guarantee",
                 description: "All repairs come with a 90-day warranty for your peace of mind.",
               },

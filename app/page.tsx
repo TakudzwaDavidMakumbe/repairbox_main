@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+      <section className="relative bg-[#FF9E00] text-white">
         <div className="container flex flex-col md:flex-row items-center py-16 md:py-24">
           <div className="md:w-1/2 space-y-6 text-center md:text-left mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -31,7 +31,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-gray-900"
+                  className="border-white text-white bg-transparent hover:bg-white hover:text-black"
                 >
                   Shop Phones
                 </Button>
@@ -61,33 +61,33 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Smartphone className="h-10 w-10 text-teal-600" />,
+                icon: <Smartphone className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Screen Replacement",
                 description: "Cracked or broken screen? We'll replace it with a high-quality display.",
                 
               },
               {
-                icon: <Tool className="h-10 w-10 text-teal-600" />,
+                icon: <Tool className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Battery Replacement",
                 description: "Restore your phone's battery life with our professional replacement service.",
               },
               {
-                icon: <Shield className="h-10 w-10 text-teal-600" />,
+                icon: <Shield className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Water Damage Repair",
                 description: "Dropped your phone in water? Our experts can help recover your device.",
               },
               {
-                icon: <Phone className="h-10 w-10 text-teal-600" />,
+                icon: <Phone className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Phone Unlocking",
                 description: "Unlock your phone to use with any carrier worldwide.",
               },
               {
-                icon: <CheckCircle className="h-10 w-10 text-teal-600" />,
+                icon: <CheckCircle className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Data Recovery",
                 description: "Lost important data? We can help recover photos, contacts, and more.",
               },
               {
-                icon: <Smartphone className="h-10 w-10 text-teal-600" />,
+                icon: <Smartphone className="h-10 w-10 text-[#FF9E00]" />,
                 title: "Phone Sales",
                 description: "Shop our selection of new and certified refurbished phones.",
               },
@@ -121,23 +121,23 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <Award className="h-12 w-12 text-teal-600" />,
+                icon: <Award className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Certified Technicians",
                 description: "Our repair technicians are certified and highly trained.",
                 
               },
               {
-                icon: <Shield className="h-12 w-12 text-teal-600" />,
+                icon: <Shield className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Quality Guarantee",
                 description: "All repairs come with a 90-day warranty for your peace of mind.",
               },
               {
-                icon: <Clock className="h-12 w-12 text-teal-600" />,
+                icon: <Clock className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Quick Turnaround",
                 description: "Most repairs are completed within 24 hours or less.",
               },
               {
-                icon: <CheckCircle className="h-12 w-12 text-teal-600" />,
+                icon: <CheckCircle className="h-12 w-12 text-[#FF9E00]" />,
                 title: "Competitive Pricing",
                 description: "Quality repairs at fair and transparent prices.",
               },
@@ -164,6 +164,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
+
               {
               model: "iPhone 14 Pro",
               storage: "256GB",
@@ -279,7 +280,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-teal-600 text-white">
+      <section className="py-16 bg-[#FF9E00] text-white">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Fix Your Phone?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -295,7 +296,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-teal-600"
+                className="border-white text-black hover:bg-white hover:text-teal-600"
               >
                 Shop Phones
               </Button>

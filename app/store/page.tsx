@@ -9,6 +9,29 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose 
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
+// Define the Phone type
+
+
+// Define the Accessory type
+type Accessory = {
+  id: number
+  name: string
+  category: string
+  price: number
+  brand: string
+  condition: string
+  image: string
+}
+
+// Define the CartItem type to handle both phones and accessories
+type CartItem = {
+  item: Phone | Accessory
+  quantity: number
+  type: "phone" | "accessory"
+}
+
 // Define the Phone type
 type Phone = {
   id: number
@@ -20,11 +43,6 @@ type Phone = {
   image: string
 }
 
-// Define the CartItem type
-type CartItem = {
-  phone: Phone
-  quantity: number
-}
 
 // Sample phone data
 const phones: Phone[] = [
@@ -540,6 +558,150 @@ const phones: Phone[] = [
   },
 ]
 
+// Sample accessories data
+const accessories: Accessory[] = [
+  // Chargers
+  {
+    id: 1,
+    name: "Apple 20W USB-C Power Adapter",
+    category: "Charger",
+    price: 19.99,
+    brand: "Apple",
+    condition: "New",
+    image:"https://m.media-amazon.com/images/I/61+M+fV28eL._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 2,
+    name: "Samsung 25W Fast Charger",
+    category: "Charger",
+    price: 24.99,
+    brand: "Samsung",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/61e+TlEInBL._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 3,
+    name: "Anker 30W USB-C Charger",
+    category: "Charger",
+    price: 29.99,
+    brand: "Anker",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/61rv3p0hdzL._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 4,
+    name: "Belkin Wireless Charging Pad",
+    category: "Charger",
+    price: 39.99,
+    brand: "Belkin",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/61dzCygXLXL._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 5,
+    name: "MagSafe Charger",
+    category: "Charger",
+    price: 39.99,
+    brand: "Apple",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/615E2JtQuEL._AC_UY327_FMwebp_QL65_.jpg",
+  },
+
+  // AirPods and Earbuds
+  {
+    id: 6,
+    name: "Apple AirPods Pro (2nd Gen)",
+    category: "Earbuds",
+    price: 249.99,
+    brand: "Apple",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/71MPNm92X6L._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 7,
+    name: "Apple AirPods (3rd Gen)",
+    category: "Earbuds",
+    price: 179.99,
+    brand: "Apple",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/61df2M5+OnL._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 8,
+    name: "Samsung Galaxy Buds Pro",
+    category: "Earbuds",
+    price: 199.99,
+    brand: "Samsung",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/41LTq51fQJS._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 9,
+    name: "Google Pixel Buds Pro",
+    category: "Earbuds",
+    price: 199.99,
+    brand: "Google",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/61DGBXMDMpL._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 10,
+    name: "Beats Studio Buds",
+    category: "Earbuds",
+    price: 149.99,
+    brand: "Beats",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/51bRSWrEc7S._AC_UY327_FMwebp_QL65_.jpg",
+  },
+
+  // Phone Cases
+  {
+    id: 11,
+    name: "iPhone 15 Pro Silicone Case",
+    category: "Case",
+    price: 49.99,
+    brand: "Apple",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/61wuUZ+XJVL._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 12,
+    name: "Samsung Galaxy S21 Clear Case",
+    category: "Case",
+    price: 29.99,
+    brand: "Samsung",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/61buB7sBAiS._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 13,
+    name: "OtterBox Defender Series for iPhone",
+    category: "Case",
+    price: 59.99,
+    brand: "OtterBox",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/51woQlZaJmS._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 14,
+    name: "Spigen Tough Armor for Galaxy",
+    category: "Case",
+    price: 39.99,
+    brand: "Spigen",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/51MGWU+EFVL._AC_UY327_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 15,
+    name: "Mous Limitless for iPhone",
+    category: "Case",
+    price: 59.99,
+    brand: "Mous",
+    condition: "New",
+    image: "https://m.media-amazon.com/images/I/71CPDpc8HEL._AC_UL480_FMwebp_QL65_.jpg",
+  },
+]
+
 export default function StorePage() {
   // Cart state
   const [cart, setCart] = useState<CartItem[]>([])
@@ -551,18 +713,25 @@ export default function StorePage() {
   const [selectedConditions, setSelectedConditions] = useState<string[]>([])
   const [selectedStorage, setSelectedStorage] = useState<string[]>([])
   const [filteredPhones, setFilteredPhones] = useState<Phone[]>(phones)
+  const [filteredAccessories, setFilteredAccessories] = useState<Accessory[]>(accessories)
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
+
+  // Add this after the other state declarations
+  const [selectedPhone, setSelectedPhone] = useState<Phone | null>(null)
+  const [selectedAccessory, setSelectedAccessory] = useState<Accessory | null>(null)
+  const [activeTab, setActiveTab] = useState("phones")
 
   // Calculate total items in cart
   const totalItems = cart.reduce((total, item) => total + item.quantity, 0)
 
   // Calculate total price
-  const totalPrice = cart.reduce((total, item) => total + item.phone.price * item.quantity, 0)
+  const totalPrice = cart.reduce((total, item) => total + item.item.price * item.quantity, 0)
 
-  // Add to cart function
-  const addToCart = (phone: Phone) => {
+  // Add to cart function for phones
+  const addPhoneToCart = (phone: Phone) => {
     setCart((prevCart) => {
       // Check if item already exists in cart
-      const existingItemIndex = prevCart.findIndex((item) => item.phone.id === phone.id)
+      const existingItemIndex = prevCart.findIndex((item) => item.type === "phone" && item.item.id === phone.id)
 
       if (existingItemIndex >= 0) {
         // Item exists, increase quantity
@@ -571,7 +740,28 @@ export default function StorePage() {
         return updatedCart
       } else {
         // Item doesn't exist, add new item
-        return [...prevCart, { phone, quantity: 1 }]
+        return [...prevCart, { item: phone, quantity: 1, type: "phone" }]
+      }
+    })
+
+    // Open the cart drawer when adding an item
+    setIsCartOpen(true)
+  }
+
+  // Add to cart function for accessories
+  const addAccessoryToCart = (accessory: Accessory) => {
+    setCart((prevCart) => {
+      // Check if item already exists in cart
+      const existingItemIndex = prevCart.findIndex((item) => item.type === "accessory" && item.item.id === accessory.id)
+
+      if (existingItemIndex >= 0) {
+        // Item exists, increase quantity
+        const updatedCart = [...prevCart]
+        updatedCart[existingItemIndex].quantity += 1
+        return updatedCart
+      } else {
+        // Item doesn't exist, add new item
+        return [...prevCart, { item: accessory, quantity: 1, type: "accessory" }]
       }
     })
 
@@ -580,22 +770,24 @@ export default function StorePage() {
   }
 
   // Remove from cart function
-  const removeFromCart = (phoneId: number) => {
-    setCart((prevCart) => prevCart.filter((item) => item.phone.id !== phoneId))
+  const removeFromCart = (itemId: number, itemType: "phone" | "accessory") => {
+    setCart((prevCart) => prevCart.filter((item) => !(item.type === itemType && item.item.id === itemId)))
   }
 
   // Update quantity function
-  const updateQuantity = (phoneId: number, newQuantity: number) => {
+  const updateQuantity = (itemId: number, itemType: "phone" | "accessory", newQuantity: number) => {
     if (newQuantity < 1) return
 
     setCart((prevCart) =>
-      prevCart.map((item) => (item.phone.id === phoneId ? { ...item, quantity: newQuantity } : item)),
+      prevCart.map((item) =>
+        item.type === itemType && item.item.id === itemId ? { ...item, quantity: newQuantity } : item,
+      ),
     )
   }
 
   // Add this function to handle checkbox changes for filters
   const handleFilterChange = (
-    filterType: "brand" | "priceRange" | "condition" | "storage",
+    filterType: "brand" | "priceRange" | "condition" | "storage" | "category",
     value: string,
     checked: boolean,
   ) => {
@@ -612,21 +804,25 @@ export default function StorePage() {
       case "storage":
         setSelectedStorage((prev) => (checked ? [...prev, value] : prev.filter((item) => item !== value)))
         break
+      case "category":
+        setSelectedCategories((prev) => (checked ? [...prev, value] : prev.filter((item) => item !== value)))
+        break
     }
   }
 
   // Add this function to apply the filters
   const applyFilters = () => {
-    let result = [...phones]
+    // Filter phones
+    let phoneResults = [...phones]
 
     // Filter by brand
     if (selectedBrands.length > 0) {
-      result = result.filter((phone) => selectedBrands.includes(phone.brand))
+      phoneResults = phoneResults.filter((phone) => selectedBrands.includes(phone.brand))
     }
 
     // Filter by price range
     if (selectedPriceRanges.length > 0) {
-      result = result.filter((phone) => {
+      phoneResults = phoneResults.filter((phone) => {
         const price = phone.price
         return selectedPriceRanges.some((range) => {
           if (range === "Under $500") return price < 500
@@ -640,15 +836,60 @@ export default function StorePage() {
 
     // Filter by condition
     if (selectedConditions.length > 0) {
-      result = result.filter((phone) => selectedConditions.includes(phone.condition))
+      phoneResults = phoneResults.filter((phone) => selectedConditions.includes(phone.condition))
     }
 
     // Filter by storage
     if (selectedStorage.length > 0) {
-      result = result.filter((phone) => selectedStorage.includes(phone.storage))
+      phoneResults = phoneResults.filter((phone) => selectedStorage.includes(phone.storage))
     }
 
-    setFilteredPhones(result)
+    setFilteredPhones(phoneResults)
+
+    // Filter accessories
+    let accessoryResults = [...accessories]
+
+    // Filter by brand
+    if (selectedBrands.length > 0) {
+      accessoryResults = accessoryResults.filter((accessory) => selectedBrands.includes(accessory.brand))
+    }
+
+    // Filter by price range
+    if (selectedPriceRanges.length > 0) {
+      accessoryResults = accessoryResults.filter((accessory) => {
+        const price = accessory.price
+        return selectedPriceRanges.some((range) => {
+          if (range === "Under $500") return price < 500
+          if (range === "$500 - $700") return price >= 500 && price <= 700
+          if (range === "$700 - $1000") return price > 700 && price <= 1000
+          if (range === "Over $1000") return price > 1000
+          return false
+        })
+      })
+    }
+
+    // Filter by condition
+    if (selectedConditions.length > 0) {
+      accessoryResults = accessoryResults.filter((accessory) => selectedConditions.includes(accessory.condition))
+    }
+
+    // Filter by category
+    if (selectedCategories.length > 0) {
+      accessoryResults = accessoryResults.filter((accessory) => selectedCategories.includes(accessory.category))
+    }
+
+    setFilteredAccessories(accessoryResults)
+  }
+
+  // Clear all filters
+  const clearFilters = () => {
+    setSelectedBrands([])
+    setSelectedPriceRanges([])
+    setSelectedConditions([])
+    setSelectedStorage([])
+    setSelectedCategories([])
+    setFilteredPhones(phones)
+    setFilteredAccessories(accessories)
   }
 
   return (
@@ -679,7 +920,19 @@ export default function StorePage() {
                 <div className="mb-6">
                   <h3 className="font-medium mb-3">Brand</h3>
                   <div className="space-y-2">
-                    {["Apple", "Samsung", "Google", "OnePlus", "Huawei", "Honor"].map((brand, index) => (
+                    {[
+                      "Apple",
+                      "Samsung",
+                      "Google",
+                      "OnePlus",
+                      "Huawei",
+                      "Honor",
+                      "Anker",
+                      "Belkin",
+                      "OtterBox",
+                      "Spigen",
+                      "Beats",
+                    ].map((brand, index) => (
                       <div key={index} className="flex items-center">
                         <input
                           type="checkbox"
@@ -738,26 +991,51 @@ export default function StorePage() {
                   </div>
                 </div>
 
-                {/* Storage Filter */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-3">Storage</h3>
-                  <div className="space-y-2">
-                    {["32GB", "64GB", "128GB", "256GB", "512GB", "1TB"].map((storage, index) => (
-                      <div key={index} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={`storage-${index}`}
-                          className="mr-2"
-                          checked={selectedStorage.includes(storage)}
-                          onChange={(e) => handleFilterChange("storage", storage, e.target.checked)}
-                        />
-                        <label htmlFor={`storage-${index}`} className="text-gray-600">
-                          {storage}
-                        </label>
-                      </div>
-                    ))}
+                {/* Storage Filter - Only show when on Phones tab */}
+                {activeTab === "phones" && (
+                  <div className="mb-6">
+                    <h3 className="font-medium mb-3">Storage</h3>
+                    <div className="space-y-2">
+                      {["32GB", "64GB", "128GB", "256GB", "512GB", "1TB"].map((storage, index) => (
+                        <div key={index} className="flex items-center">
+                          <input
+                            type="checkbox"
+                            id={`storage-${index}`}
+                            className="mr-2"
+                            checked={selectedStorage.includes(storage)}
+                            onChange={(e) => handleFilterChange("storage", storage, e.target.checked)}
+                          />
+                          <label htmlFor={`storage-${index}`} className="text-gray-600">
+                            {storage}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
+
+                {/* Category Filter - Only show when on Accessories tab */}
+                {activeTab === "accessories" && (
+                  <div className="mb-6">
+                    <h3 className="font-medium mb-3">Category</h3>
+                    <div className="space-y-2">
+                      {["Charger", "Earbuds", "Case"].map((category, index) => (
+                        <div key={index} className="flex items-center">
+                          <input
+                            type="checkbox"
+                            id={`category-${index}`}
+                            className="mr-2"
+                            checked={selectedCategories.includes(category)}
+                            onChange={(e) => handleFilterChange("category", category, e.target.checked)}
+                          />
+                          <label htmlFor={`category-${index}`} className="text-gray-600">
+                            {category}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <Button className="w-full" onClick={applyFilters}>
                   Apply Filters
@@ -765,18 +1043,9 @@ export default function StorePage() {
                 {(selectedBrands.length > 0 ||
                   selectedPriceRanges.length > 0 ||
                   selectedConditions.length > 0 ||
-                  selectedStorage.length > 0) && (
-                  <Button
-                    variant="outline"
-                    className="w-full mt-2"
-                    onClick={() => {
-                      setSelectedBrands([])
-                      setSelectedPriceRanges([])
-                      setSelectedConditions([])
-                      setSelectedStorage([])
-                      setFilteredPhones(phones)
-                    }}
-                  >
+                  selectedStorage.length > 0 ||
+                  selectedCategories.length > 0) && (
+                  <Button variant="outline" className="w-full mt-2" onClick={clearFilters}>
                     Clear Filters
                   </Button>
                 )}
@@ -787,9 +1056,13 @@ export default function StorePage() {
             <div className="lg:w-3/4">
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-2xl font-semibold">
-                  {filteredPhones.length === phones.length
-                    ? `All Phones (${phones.length})`
-                    : `Filtered Phones (${filteredPhones.length})`}
+                  {activeTab === "phones"
+                    ? filteredPhones.length === phones.length
+                      ? `All Phones (${phones.length})`
+                      : `Filtered Phones (${filteredPhones.length})`
+                    : filteredAccessories.length === accessories.length
+                      ? `All Accessories (${accessories.length})`
+                      : `Filtered Accessories (${filteredAccessories.length})`}
                 </h2>
                 <div className="flex items-center gap-4">
                   <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
@@ -819,37 +1092,46 @@ export default function StorePage() {
                         </div>
                       ) : (
                         <div className="flex flex-col gap-4 mt-4 max-h-[70vh] overflow-auto">
-                          {cart.map((item) => (
-                            <div key={item.phone.id} className="flex gap-4 py-4">
+                          {cart.map((cartItem) => (
+                            <div key={`${cartItem.type}-${cartItem.item.id}`} className="flex gap-4 py-4">
                                 <div className="relative h-20 w-20 rounded-md overflow-hidden flex-shrink-0">
                                 <Image
-                                  src={item.phone.image || "/placeholder.svg"}
-                                  alt={item.phone.name}
+                                  src={cartItem.item.image || "/placeholder.svg"}
+                                  alt={cartItem.item.name}
                                   fill
-                                  className="object-contain"
-                                  sizes="80px"
+                                  sizes="(max-width: 80px) 100vw"
+                                  className="object-cover p-2"
+                                  priority
                                 />
                                 </div>
                               <div className="flex flex-col flex-1">
-                                <h4 className="font-medium">{item.phone.name}</h4>
-                                <p className="text-sm text-gray-500">{item.phone.storage}</p>
+                                <h4 className="font-medium">{cartItem.item.name}</h4>
+                                <p className="text-sm text-gray-500">
+                                  {cartItem.type === "phone"
+                                    ? (cartItem.item as Phone).storage
+                                    : (cartItem.item as Accessory).category}
+                                </p>
                                 <div className="flex justify-between items-center mt-2">
                                   <div className="flex items-center border rounded-md">
                                     <Button
                                       variant="ghost"
                                       size="icon"
                                       className="h-8 w-8 rounded-none"
-                                      onClick={() => updateQuantity(item.phone.id, item.quantity - 1)}
+                                      onClick={() =>
+                                        updateQuantity(cartItem.item.id, cartItem.type, cartItem.quantity - 1)
+                                      }
                                     >
                                       <Minus className="h-3 w-3" />
                                       <span className="sr-only">Decrease quantity</span>
                                     </Button>
-                                    <span className="w-8 text-center">{item.quantity}</span>
+                                    <span className="w-8 text-center">{cartItem.quantity}</span>
                                     <Button
                                       variant="ghost"
                                       size="icon"
                                       className="h-8 w-8 rounded-none"
-                                      onClick={() => updateQuantity(item.phone.id, item.quantity + 1)}
+                                      onClick={() =>
+                                        updateQuantity(cartItem.item.id, cartItem.type, cartItem.quantity + 1)
+                                      }
                                     >
                                       <Plus className="h-3 w-3" />
                                       <span className="sr-only">Increase quantity</span>
@@ -859,7 +1141,7 @@ export default function StorePage() {
                                     variant="ghost"
                                     size="icon"
                                     className="h-8 w-8 text-red-500"
-                                    onClick={() => removeFromCart(item.phone.id)}
+                                    onClick={() => removeFromCart(cartItem.item.id, cartItem.type)}
                                   >
                                     <Trash2 className="h-4 w-4" />
                                     <span className="sr-only">Remove item</span>
@@ -867,7 +1149,7 @@ export default function StorePage() {
                                 </div>
                               </div>
                               <div className="flex-shrink-0 font-medium">
-                                ${(item.phone.price * item.quantity).toFixed(2)}
+                                ${(cartItem.item.price * cartItem.quantity).toFixed(2)}
                               </div>
                             </div>
                           ))}
@@ -891,14 +1173,18 @@ export default function StorePage() {
                               onClick={() => {
                                 // Format cart items for WhatsApp message
                                 const itemsList = cart
-                                  .map(
-                                    (item) =>
-                                      `- ${item.phone.name} (${item.phone.storage}, ${item.phone.condition}): $${item.phone.price} x ${item.quantity} = $${(item.phone.price * item.quantity).toFixed(2)}`,
-                                  )
+                                  .map((cartItem) => {
+                                    const itemDetails =
+                                      cartItem.type === "phone"
+                                        ? `(${(cartItem.item as Phone).storage}, ${cartItem.item.condition})`
+                                        : `(${(cartItem.item as Accessory).category}, ${cartItem.item.condition})`
+
+                                    return `- ${cartItem.item.name} ${itemDetails}: $${cartItem.item.price} x ${cartItem.quantity} = $${(cartItem.item.price * cartItem.quantity).toFixed(2)}`
+                                  })
                                   .join("\n")
 
                                 // Create the complete message
-                                const message = `I want to buy this product:\n\n${itemsList}\n\nTotal: $${totalPrice.toFixed(2)}`
+                                const message = `I want to buy these products:\n\n${itemsList}\n\nTotal: $${totalPrice.toFixed(2)}`
 
                                 // Create WhatsApp URL with the message
                                 const whatsappUrl = `https://wa.me/263779286308?text=${encodeURIComponent(message)}`
@@ -927,42 +1213,123 @@ export default function StorePage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredPhones.map((phone) => (
-                  <div
-                    key={phone.id}
-                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-                  >
-                    <div className="relative h-48">
-                      <Image 
-                      src={phone.image || "/placeholder.svg"} 
-                      alt={phone.name} 
-                      fill 
-                      className="object-contain p-2" 
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                      {phone.condition === "Refurbished" && (
-                      <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
-                        Refurbished
-                      </span>
-                      )}
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold mb-1">{phone.name}</h3>
-                      <p className="text-gray-500 mb-2">
-                        {phone.storage}, {phone.brand}
-                      </p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-xl font-bold">${phone.price}</span>
-                        <Button size="sm" className="flex items-center gap-1" onClick={() => addToCart(phone)}>
-                          <ShoppingCart className="h-4 w-4" />
-                          Add to Cart
-                        </Button>
+              {/* Tabs for Phones and Accessories */}
+              <Tabs defaultValue="phones" className="mb-8" onValueChange={(value) => setActiveTab(value)}>
+                <TabsList className="grid w-full grid-cols-2">
+                  <TabsTrigger value="phones">All Phones</TabsTrigger>
+                  <TabsTrigger value="accessories">Accessories</TabsTrigger>
+                </TabsList>
+
+                {/* Phones Tab Content */}
+                <TabsContent value="phones">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredPhones.map((phone) => (
+                      <div
+                        key={phone.id}
+                        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                      >
+                        <div className="relative h-48">
+                          <Image
+                          src={phone.image || "/placeholder.svg"}
+                          alt={phone.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          style={{
+                            objectFit: "contain",
+                            padding: "1rem",
+                            maxWidth: "100%",
+                            maxHeight: "100%"
+                          }}
+                          priority
+                          />
+                          {phone.condition === "Refurbished" && (
+                          <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
+                            Refurbished
+                          </span>
+                          )}
+                        </div>
+                        <div className="p-4">
+                          <h3 className="text-lg font-semibold mb-1">{phone.name}</h3>
+                          <p className="text-gray-500 mb-2">
+                            {phone.storage}, {phone.brand}
+                          </p>
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-xl font-bold">${phone.price}</span>
+                            <Button size="sm" className="flex items-center gap-1" onClick={() => addPhoneToCart(phone)}>
+                              <ShoppingCart className="h-4 w-4" />
+                              Add to Cart
+                            </Button>
+                          </div>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="w-full mt-2"
+                            onClick={() => setSelectedPhone(phone)}
+                          >
+                            View More Details
+                          </Button>
+                        </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </TabsContent>
+
+                {/* Accessories Tab Content */}
+                <TabsContent value="accessories">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredAccessories.map((accessory) => (
+                      <div
+                        key={accessory.id}
+                        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                      >
+                        <div className="relative h-48">
+                          <Image
+                          src={accessory.image || "/placeholder.svg"}
+                          alt={accessory.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          style={{
+                            objectFit: "contain",
+                            padding: "1rem",
+                            maxWidth: "100%",
+                            maxHeight: "100%"
+                          }}
+                          priority
+                          />
+                          <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
+                          {accessory.category}
+                          </span>
+                        </div>
+                        <div className="p-4">
+                          <h3 className="text-lg font-semibold mb-1">{accessory.name}</h3>
+                          <p className="text-gray-500 mb-2">{accessory.brand}</p>
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-xl font-bold">${accessory.price.toFixed(2)}</span>
+                            <Button
+                              size="sm"
+                              className="flex items-center gap-1"
+                              onClick={() => addAccessoryToCart(accessory)}
+                            >
+                              <ShoppingCart className="h-4 w-4" />
+                              Add to Cart
+                            </Button>
+                          </div>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="w-full mt-2"
+                            onClick={() => setSelectedAccessory(accessory)}
+                          >
+                            View More Details
+                          </Button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </TabsContent>
+              </Tabs>
 
               {/* Pagination */}
               <div className="flex justify-center mt-12">
@@ -1024,7 +1391,7 @@ export default function StorePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-teal-600 text-white">
+      <section className="py-16 bg-[#FF9E00] text-white">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help Choosing a Phone?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -1037,6 +1404,165 @@ export default function StorePage() {
           </Link>
         </div>
       </section>
+
+      {/* Phone Details Modal */}
+      {selectedPhone && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-lg max-w-md w-full max-h-[90vh] overflow-auto">
+            <div className="relative h-64">
+              <Image
+                src={selectedPhone.image || "/placeholder.svg"}
+                alt={selectedPhone.name}
+                fill
+                className="object-cover"
+              />
+              {selectedPhone.condition === "Refurbished" && (
+                <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
+                  Refurbished
+                </span>
+              )}
+            </div>
+            <div className="p-6">
+              <h2 className="text-2xl font-bold mb-2">{selectedPhone.name}</h2>
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <h3 className="font-semibold text-gray-700">Brand</h3>
+                  <p>{selectedPhone.brand}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-700">Price</h3>
+                  <p className="text-xl font-bold text-teal-600">${selectedPhone.price}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-700">Storage</h3>
+                  <p>{selectedPhone.storage}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-700">Condition</h3>
+                  <p>{selectedPhone.condition}</p>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h3 className="font-semibold text-gray-700 mb-2">Description</h3>
+                <p className="text-gray-600">
+                  The {selectedPhone.name} features a stunning display, powerful processor, and exceptional camera
+                  system. With {selectedPhone.storage} of storage, you'll have plenty of space for all your apps,
+                  photos, and videos.
+                </p>
+              </div>
+
+              <div className="mb-4">
+                <h3 className="font-semibold text-gray-700 mb-2">Colors</h3>
+                <div className="flex gap-2">
+                  <span className="px-3 py-1 bg-gray-800 text-white text-sm rounded-full">Space Gray</span>
+                  <span className="px-3 py-1 bg-gray-200 text-gray-800 text-sm rounded-full">Silver</span>
+                  <span className="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Gold</span>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h3 className="font-semibold text-gray-700 mb-2">Features</h3>
+                <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                  <li>4.7-inch Retina HD display</li>
+                  <li>A8 chip</li>
+                  <li>8MP camera</li>
+                  <li>Touch ID</li>
+                  <li>iOS 8</li>
+                </ul>
+              </div>
+
+              <div className="flex gap-2">
+                <Button
+                  className="flex-1"
+                  onClick={() => {
+                    addPhoneToCart(selectedPhone)
+                    setSelectedPhone(null)
+                  }}
+                >
+                  <ShoppingCart className="h-4 w-4 mr-2" />
+                  Add to Cart
+                </Button>
+                <Button variant="outline" onClick={() => setSelectedPhone(null)}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Accessory Details Modal */}
+      {selectedAccessory && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-lg max-w-md w-full max-h-[90vh] overflow-auto">
+            <div className="relative h-64">
+              <Image
+                src={selectedAccessory.image || "/placeholder.svg"}
+                alt={selectedAccessory.name}
+                fill
+                className="object-cover"
+              />
+              <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
+                {selectedAccessory.category}
+              </span>
+            </div>
+            <div className="p-6">
+              <h2 className="text-2xl font-bold mb-2">{selectedAccessory.name}</h2>
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <h3 className="font-semibold text-gray-700">Brand</h3>
+                  <p>{selectedAccessory.brand}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-700">Price</h3>
+                  <p className="text-xl font-bold text-teal-600">${selectedAccessory.price.toFixed(2)}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-700">Category</h3>
+                  <p>{selectedAccessory.category}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-700">Condition</h3>
+                  <p>{selectedAccessory.condition}</p>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h3 className="font-semibold text-gray-700 mb-2">Description</h3>
+                <p className="text-gray-600">
+                  The {selectedAccessory.name} is a high-quality {selectedAccessory.category.toLowerCase()} designed to
+                  enhance your mobile experience. Made by {selectedAccessory.brand}, it offers excellent performance and
+                  reliability.
+                </p>
+              </div>
+
+              <div className="mb-4">
+                <h3 className="font-semibold text-gray-700 mb-2">Compatible With</h3>
+                <p className="text-gray-600">
+                  Compatible with most modern smartphones including iPhone and Android devices.
+                </p>
+              </div>
+
+              <div className="flex gap-2">
+                <Button
+                  className="flex-1"
+                  onClick={() => {
+                    addAccessoryToCart(selectedAccessory)
+                    setSelectedAccessory(null)
+                  }}
+                >
+                  <ShoppingCart className="h-4 w-4 mr-2" />
+                  Add to Cart
+                </Button>
+                <Button variant="outline" onClick={() => setSelectedAccessory(null)}>
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }
