@@ -11,15 +11,14 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-[#FF9E00] text-white">
+      <section className="relative bg-gradient-to-r from-[#FF6A00] to-white text-white">
         <div className="container flex flex-col md:flex-row items-center py-16 md:py-24">
           <div className="md:w-1/2 space-y-6 text-center md:text-left mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Expert Phone Repairs & Quality Devices
+            Fixing the Nation, One Phone at a Time
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-xl">
-              We fix what others can't. Get your phone repaired by certified technicians or shop our selection of
-              quality phones.
+            Fast, friendly repairs & premium electronics—book or shop in seconds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link href="/repairs">
@@ -33,7 +32,7 @@ export default function HomePage() {
                   variant="outline"
                   className="border-white text-white bg-transparent hover:bg-white hover:text-black"
                 >
-                  Shop Phones
+                  Browse Store
                 </Button>
               </Link>
             </div>
@@ -41,11 +40,13 @@ export default function HomePage() {
           <div className="md:w-1/2 relative">
            
              <div className="relative regular">
-            <div className="absolute -inset-4 bg-gradient-to-r bg-orange-500 to-orange-500 rounded-3xl opacity-30 blur-3xl"></div>
+            <div className="absolute -inset-4 bg-gradient-to-r bg-[#FF6A00] to-orange-500 rounded-3xl opacity-30 blur-3xl"></div>
             <Image src={img} alt="iPhone X" className="relative w-full h-auto hover:scale-105 transition-transform duration-500" />
           </div>
           </div>
+          
         </div>
+        
       </section>
 
       {/* Services Overview */}
@@ -61,33 +62,33 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Smartphone className="h-10 w-10 text-[#FF9E00]" />,
+                icon: <Smartphone className="h-10 w-10 text-[#FF6A00]" />,
                 title: "Screen Replacement",
                 description: "Cracked or broken screen? We'll replace it with a high-quality display.",
                 
               },
               {
-                icon: <Tool className="h-10 w-10 text-[#FF9E00]" />,
+                icon: <Tool className="h-10 w-10 text-[#FF6A00]" />,
                 title: "Battery Replacement",
                 description: "Restore your phone's battery life with our professional replacement service.",
               },
               {
-                icon: <Shield className="h-10 w-10 text-[#FF9E00]" />,
+                icon: <Shield className="h-10 w-10 text-[#FF6A00]" />,
                 title: "Water Damage Repair",
                 description: "Dropped your phone in water? Our experts can help recover your device.",
               },
               {
-                icon: <Phone className="h-10 w-10 text-[#FF9E00]" />,
+                icon: <Phone className="h-10 w-10 text-[#FF6A00]" />,
                 title: "Phone Unlocking",
                 description: "Unlock your phone to use with any carrier worldwide.",
               },
               {
-                icon: <CheckCircle className="h-10 w-10 text-[#FF9E00]" />,
+                icon: <CheckCircle className="h-10 w-10 text-[#FF6A00]" />,
                 title: "Data Recovery",
                 description: "Lost important data? We can help recover photos, contacts, and more.",
               },
               {
-                icon: <Smartphone className="h-10 w-10 text-[#FF9E00]" />,
+                icon: <Smartphone className="h-10 w-10 text-[#FF6A00]" />,
                 title: "Phone Sales",
                 description: "Shop our selection of new and certified refurbished phones.",
               },
@@ -121,23 +122,23 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <Award className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <Award className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Certified Technicians",
                 description: "Our repair technicians are certified and highly trained.",
                 
               },
               {
-                icon: <Shield className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <Shield className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Quality Guarantee",
                 description: "All repairs come with a 90-day warranty for your peace of mind.",
               },
               {
-                icon: <Clock className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <Clock className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Quick Turnaround",
                 description: "Most repairs are completed within 24 hours or less.",
               },
               {
-                icon: <CheckCircle className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <CheckCircle className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Competitive Pricing",
                 description: "Quality repairs at fair and transparent prices.",
               },
@@ -280,7 +281,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#FF9E00] text-white">
+      <section className="py-16 bg-[#FF6A00] text-white">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Fix Your Phone?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

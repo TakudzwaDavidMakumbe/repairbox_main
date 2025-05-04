@@ -28,8 +28,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-4">
-                Founded in 2015, RepairBox began as a small repair shop with a big vision: to provide high-quality,
-                affordable phone repairs with exceptional customer service.
+              RepairBox specializes in fast, friendly, and professional repair services for mobile devices (smartphones, tablets, iPads), laptops & notebooks, audio & speaker systems, and small appliances. We also offer a range of consumer electronics and accessories.
               </p>
               <p className="text-gray-600 mb-4">
                 What started as a passion project by our founder, who was frustrated with the lack of reliable repair
@@ -72,7 +71,7 @@ export default function AboutPage() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-3">Our Values</h3>
                 <p className="text-gray-600">
-                  Integrity, excellence, innovation, and customer satisfaction guide everything we do.
+                Fast: Same-day repairs (next-day at worst), Friendly & Professional: Honest, knowledgeable, and helpful service ,Transparent: Free diagnostics with custom quotes and clear, reliable solutions
                 </p>
               </div>
             </div>
@@ -128,24 +127,24 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                icon: <Award className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <Award className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Certified Technicians",
                 description:
                   "Our repair technicians are certified and highly trained to handle all types of phone repairs.",
               },
               {
-                icon: <Users className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <Users className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Customer-First Approach",
                 description: "We prioritize your needs and ensure you're satisfied with our services.",
               },
               {
-                icon: <Clock className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <Clock className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Quick Turnaround",
                 description:
                   "Most repairs are completed within 24 hours or less, so you're not without your device for long.",
               },
               {
-                icon: <CheckCircle className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <CheckCircle className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Quality Guarantee",
                 description: "All repairs come with a 90-day warranty for your peace of mind.",
               },

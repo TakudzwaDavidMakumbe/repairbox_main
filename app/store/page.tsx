@@ -2208,7 +2208,7 @@ export default function StorePage() {
   }
 
   // Remove from cart function
-  const removeFromCart = (itemId: number, itemType: "phone" | "accessory") => {
+  const removeFromCart = (itemId: number, itemType: "phone" | "tablet" | "accessory") => {
     setCart((prevCart) => prevCart.filter((item) => !(item.type === itemType && item.item.id === itemId)))
   }
 
@@ -2674,7 +2674,7 @@ export default function StorePage() {
                                   .join("\n")
 
                                 // Create the complete message
-                                const message = `I want to buy these products:\n\n${itemsList}\n\nTotal: $${totalPrice.toFixed(2)}`
+                                const message = `Hie RepaieBox I want to buy these products:\n\n${itemsList}\n\nTotal: $${totalPrice.toFixed(2)}`
 
                                 // Create WhatsApp URL with the message
                                 const whatsappUrl = `https://wa.me/263779286308?text=${encodeURIComponent(message)}`

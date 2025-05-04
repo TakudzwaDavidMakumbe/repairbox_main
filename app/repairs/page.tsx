@@ -18,7 +18,7 @@ export default function RepairsPage() {
     {
       id: 1,
       title: "Screen Replacement",
-      icon: <Smartphone className="h-10 w-10 text-[#FF9E00]" />,
+      icon: <Smartphone className="h-10 w-10 text-[#FF6A00]" />,
       description: "Fix cracked or broken screens with high-quality replacement parts.",
       price: "From $79",
       time: "1-2 hours",
@@ -27,7 +27,7 @@ export default function RepairsPage() {
     {
       id: 2,
       title: "Battery Replacement",
-      icon: <Battery className="h-10 w-10 text-[#FF9E00]" />,
+      icon: <Battery className="h-10 w-10 text-[#FF6A00]" />,
       description: "Restore your phone's battery life with a new battery.",
       price: "From $49",
       time: "30-60 minutes",
@@ -36,7 +36,7 @@ export default function RepairsPage() {
     {
       id: 3,
       title: "Water Damage Repair",
-      icon: <Droplet className="h-10 w-10 text-[#FF9E00]" />,
+      icon: <Droplet className="h-10 w-10 text-[#FF6A00]" />,
       description: "Recover your device from water damage and prevent long-term issues.",
       price: "From $99",
       time: "24-48 hours",
@@ -45,7 +45,7 @@ export default function RepairsPage() {
     {
       id: 4,
       title: "Camera Repair",
-      icon: <Camera className="h-10 w-10 text-[#FF9E00]" />,
+      icon: <Camera className="h-10 w-10 text-[#FF6A00]" />,
       description: "Fix front or rear camera issues to get back to taking great photos.",
       price: "From $69",
       time: "1-2 hours",
@@ -54,7 +54,7 @@ export default function RepairsPage() {
     {
       id: 5,
       title: "Software Issues",
-      icon: <Cpu className="h-10 w-10 text-[#FF9E00]" />,
+      icon: <Cpu className="h-10 w-10 text-[#FF6A00]" />,
       description: "Resolve software glitches, freezing, or other software-related problems.",
       price: "From $39",
       time: "30-60 minutes",
@@ -63,7 +63,7 @@ export default function RepairsPage() {
     {
       id: 6,
       title: "Phone Unlocking",
-      icon: <Lock className="h-10 w-10 text-[#FF9E00]" />,
+      icon: <Lock className="h-10 w-10 text-[#FF6A00]" />,
       description: "Unlock your phone to use with any carrier worldwide.",
       price: "From $29",
       time: "15-30 minutes",
@@ -135,7 +135,7 @@ export default function RepairsPage() {
                     <Button className="w-full">Book This Repair</Button>
                   </Link>
                   <Link href="/contact">
-                    <Button className="w-full bg-[#FF9E00] mt-2">Get a Quote </Button>
+                    <Button className="w-full bg-[#FF6A00] mt-2">Get a Quote </Button>
                   </Link>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function RepairsPage() {
               },
             ].map((step, index) => (
               <div key={index} className="text-center p-6 bg-white rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-[#FF9E00] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#FF6A00] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
@@ -221,17 +221,17 @@ export default function RepairsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <CheckCircle className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <CheckCircle className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Quality Guarantee",
                 description: "All repairs come with a 90-day warranty for your peace of mind.",
               },
               {
-                icon: <Clock className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <Clock className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Quick Turnaround",
                 description: "Most repairs are completed within 24 hours or less.",
               },
               {
-                icon: <DollarSign className="h-12 w-12 text-[#FF9E00]" />,
+                icon: <DollarSign className="h-12 w-12 text-[#FF6A00]" />,
                 title: "Competitive Pricing",
                 description: "Quality repairs at fair and transparent prices.",
               },
@@ -296,7 +296,7 @@ export default function RepairsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#FF9E00] text-white">
+      <section className="py-16 bg-[#FF6A00] text-white">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Fix Your Phone?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
