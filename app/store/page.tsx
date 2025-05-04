@@ -2213,7 +2213,7 @@ export default function StorePage() {
   }
 
   // Update quantity function
-  const updateQuantity = (itemId: number, itemType: "phone" | "accessory", newQuantity: number) => {
+  const updateQuantity = (itemId: number, itemType: "phone" | "tablet" | "accessory", newQuantity: number) => {
     if (newQuantity < 1) return
 
     setCart((prevCart) =>
@@ -2717,50 +2717,54 @@ export default function StorePage() {
                 </TabsList>
 
                 {/* Phones Tab Content */}
-                <TabsContent value="phones">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filteredPhones.map((phone) => (
-                      <div
-                        key={phone.id}
-                        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                <TabsContent value="phones" className="w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                  {filteredPhones.map((phone) => (
+                    <div
+                    key={phone.id}
+                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow w-full"
+                    >
+                    <div className="relative h-48 w-full">
+                      <Image
+                      src={phone.image || "/placeholder.svg"}
+                      alt={phone.name}
+                      fill
+                      className="object-contain p-4"
+                      />
+                      {phone.condition === "Refurbished" && (
+                      <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
+                        Refurbished
+                      </span>
+                      )}
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold mb-1 break-words">{phone.name}</h3>
+                      <p className="text-gray-500 mb-2">
+                      {phone.storage ? `${phone.storage}, ` : ""}
+                      {phone.brand}
+                      </p>
+                      <div className="flex justify-between items-center mb-2">
+                      <span className="text-xl font-bold">${phone.price.toFixed(2)}</span>
+                      <Button 
+                        size="sm" 
+                        className="flex items-center gap-1 text-sm" 
+                        onClick={() => addPhoneToCart(phone)}
                       >
-                        <div className="relative h-48">
-                          <Image
-                          src={phone.image || "/placeholder.svg"}
-                          alt={phone.name}
-                          fill
-                          className="object-contain p-4"
-                          />
-                          {phone.condition === "Refurbished" && (
-                          <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
-                            Refurbished
-                          </span>
-                          )}
-                        </div>
-                        <div className="p-4">
-                          <h3 className="text-lg font-semibold mb-1">{phone.name}</h3>
-                          <p className="text-gray-500 mb-2">
-                            {phone.storage ? `${phone.storage}, ` : ""}
-                            {phone.brand}
-                          </p>
-                          <div className="flex justify-between items-center mb-2">
-                            <span className="text-xl font-bold">${phone.price.toFixed(2)}</span>
-                            <Button size="sm" className="flex items-center gap-1" onClick={() => addPhoneToCart(phone)}>
-                              <ShoppingCart className="h-4 w-4" />
-                              Add to Cart
-                            </Button>
-                          </div>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="w-full mt-2"
-                            onClick={() => setSelectedPhone(phone)}
-                          >
-                            View More Details
-                          </Button>
-                        </div>
+                        <ShoppingCart className="h-4 w-4" />
+                        Add to Cart
+                      </Button>
                       </div>
-                    ))}
+                      <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full mt-2"
+                      onClick={() => setSelectedPhone(phone)}
+                      >
+                      View More Details
+                      </Button>
+                    </div>
+                    </div>
+                  ))}
                   </div>
                 </TabsContent>
 
@@ -2817,32 +2821,32 @@ export default function StorePage() {
                 </TabsContent>
 
                 {/* Accessories Tab Content */}
-                <TabsContent value="accessories">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <TabsContent value="accessories" className="w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                     {filteredAccessories.map((accessory) => (
                       <div
                         key={accessory.id}
-                        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow w-full"
                       >
-                        <div className="relative h-48">
+                        <div className="relative h-48 w-full">
                           <Image
-                          src={accessory.image || "/placeholder.svg"}
-                          alt={accessory.name}
-                          fill
-                          className="object-contain p-4"
+                            src={accessory.image || "/placeholder.svg"}
+                            alt={accessory.name}
+                            fill
+                            className="object-contain p-4"
                           />
                           <span className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-2 py-1 rounded">
-                          {accessory.category}
+                            {accessory.category}
                           </span>
                         </div>
                         <div className="p-4">
-                          <h3 className="text-lg font-semibold mb-1">{accessory.name}</h3>
+                          <h3 className="text-lg font-semibold mb-1 break-words">{accessory.name}</h3>
                           <p className="text-gray-500 mb-2">{accessory.brand}</p>
                           <div className="flex justify-between items-center mb-2">
                             <span className="text-xl font-bold">${accessory.price.toFixed(2)}</span>
                             <Button
                               size="sm"
-                              className="flex items-center gap-1"
+                              className="flex items-center gap-1 text-sm"
                               onClick={() => addAccessoryToCart(accessory)}
                             >
                               <ShoppingCart className="h-4 w-4" />
@@ -2941,7 +2945,7 @@ export default function StorePage() {
       {/* Phone Details Modal */}
       {selectedPhone && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-lg max-w-md w-full max-h-[90vh] overflow-auto">
+          <div className="bg-white rounded-lg shadow-lg w-full max-w-md max-h-[90vh] overflow-auto p-4 sm:p-6">
             <div className="relative h-64">
               <Image
               src={selectedPhone.image || "/placeholder.svg"}
@@ -2955,7 +2959,7 @@ export default function StorePage() {
               </span>
               )}
             </div>
-            <div className="p-6">
+            <div className="p-4">
               <h2 className="text-2xl font-bold mb-2">{selectedPhone.name}</h2>
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
@@ -3026,7 +3030,7 @@ export default function StorePage() {
       {/* Accessory Details Modal */}
       {selectedAccessory && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-lg max-w-md w-full max-h-[90vh] overflow-auto">
+          <div className="bg-white rounded-lg shadow-lg w-full max-w-md max-h-[90vh] overflow-auto p-4 sm:p-6">
             <div className="relative h-64">
               <Image
               src={selectedAccessory.image || "/placeholder.svg"}
@@ -3038,7 +3042,7 @@ export default function StorePage() {
               {selectedAccessory.category}
               </span>
             </div>
-            <div className="p-6">
+            <div className="p-4">
               <h2 className="text-2xl font-bold mb-2">{selectedAccessory.name}</h2>
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
