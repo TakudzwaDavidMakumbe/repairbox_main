@@ -2371,8 +2371,8 @@ export default function StorePage() {
       <section className="bg-gray-100 py-16 md:py-24">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Shop Phones</h1>
-            <p className="text-xl text-gray-600">Browse our selection of new and certified refurbished phones.</p>
+            <h1 className="text-4xl md:text-5xl bold font-bold mb-6">Shop Phones</h1>
+            <p className="text-xl regular text-gray-600">Browse our selection of new and certified refurbished phones.</p>
           </div>
         </div>
       </section>
@@ -2385,7 +2385,7 @@ export default function StorePage() {
            
 
             {/* Products Grid */}
-            <div className="lg:w-3/4">
+            <div className="lg:w-full">
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-2xl font-semibold">
                   {activeTab === "phones"
@@ -2591,7 +2591,7 @@ export default function StorePage() {
                       <span className="text-xl font-bold">${phone.price.toFixed(2)}</span>
                       <Button 
                         size="sm" 
-                        className="flex items-center gap-1 text-sm" 
+                        className="flex items-center bg-[#FF7E23] gap-1 text-sm" 
                         onClick={() => addPhoneToCart(phone)}
                       >
                         <ShoppingCart className="h-4 w-4" />
@@ -2643,7 +2643,7 @@ export default function StorePage() {
                             <span className="text-xl font-bold">${tablet.price.toFixed(2)}</span>
                             <Button
                               size="sm"
-                              className="flex items-center gap-1"
+                              className="flex bg-[#FF7E23] items-center gap-1"
                               onClick={() => addTabletToCart(tablet)}
                             >
                               <ShoppingCart className="h-4 w-4" />
@@ -2690,7 +2690,7 @@ export default function StorePage() {
                             <span className="text-xl font-bold">${accessory.price.toFixed(2)}</span>
                             <Button
                               size="sm"
-                              className="flex items-center gap-1 text-sm"
+                              className="flex items-center bg-[#FF7E23] gap-1 text-sm"
                               onClick={() => addAccessoryToCart(accessory)}
                             >
                               <ShoppingCart className="h-4 w-4" />
